@@ -1,0 +1,11 @@
+{
+    "cam_groups": ["cam_01", "cam_02", "cam_03", "cam_04", "cam_05", "cam_06", "cam_07", "cam_08", "cam_09", "cam_10"],
+    "night_time_cams": ["cam_03", "cam_05", "cam_08"],
+    "num_random_configs": 10,
+    "augmentations":{
+        "weather_transforms": {
+            "random_rain": 0.2,
+            "random_shadow": 0.3
+        }
+    }
+}
