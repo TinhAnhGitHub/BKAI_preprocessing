@@ -117,6 +117,9 @@ def process_image(
         image_height, image_width = df_image['image_height'].iloc[0], df_image['image_width'].iloc[0]
         image_path = df_image['full_path'].iloc[0]
         new_records = []
+        old_image_name = image_name
+        image_name = "modified_"+ image_name
+        image_id = "modified_" + image_id
         for record in records:
             new_record = {
                 'filename': image_name,
@@ -139,9 +142,9 @@ def process_image(
 
         annot_aug = visualize_results(
             augmented_img.copy(),
-            df
+            df[(df['filename'] == old_image_name) | (df['filename'] == image_name)].copy()
         )
-        image_name = "modified_"+ image_name
+        
         output_image_path = Path(output_folder) / 'image' / image_name
         output_annot_path = Path(output_folder) / 'image_annote' / image_name
 

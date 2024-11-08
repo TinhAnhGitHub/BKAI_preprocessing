@@ -19,8 +19,8 @@ def get_random_configs(num_configs: int = 10) -> List[CutPasteConfig]:
       config = CutPasteConfig(
           class_priority=[3, 2, 1, 0],
           objects_per_class={
-              0: (0, random.randint(15, 20)),  
-              1: (0, random.randint(10, 20)),  
+              0: (0, random.randint(25, 40)),  
+              1: (0, random.randint(20, 35)),  
               2: (0, random.randint(0, 5)),  
               3: (0, random.randint(0, 1)),   
           },
